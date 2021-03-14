@@ -4,10 +4,13 @@ from cloudinary.api import delete_resources_by_tag, resources_by_tag
 from cloudinary.uploader import upload
 from cloudinary.utils import cloudinary_url
 
+# import keys
+from config import config
+
 cloudinary.config(
-  cloud_name = 'pspscloudi',  
-  api_key = '249617957242568',  
-  api_secret = 'QhnFKbOjo4yAtteUquzTZbGuuxc'  
+  cloud_name = config['cloud_name'],  
+  api_key = config['api_key'],  
+  api_secret = config['api_secret']  
 )
 
 DEFAULT_TAG = "python_sample_basic"
