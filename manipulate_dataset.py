@@ -6,13 +6,13 @@ from cloudinary.utils import cloudinary_url
 
 cloudinary.config(
   cloud_name = 'pspscloudi',  
-#   api_key = 'insert',  
-#   api_secret = 'insert'  
+  api_key = '249617957242568',  
+  api_secret = 'QhnFKbOjo4yAtteUquzTZbGuuxc'  
 )
 
 DEFAULT_TAG = "python_sample_basic"
 
-path = 'albert_apollo'
+path = 'cow_photos'
 files = os.listdir(path)
 
 def rename_dataset():
@@ -47,9 +47,10 @@ def upload_dataset():
         print("Uploading ", psps_object)
         upload(
             psps_object,
-            folder="apollo_albert",
+            folder="cow",
+            overwrite = True,
             public_id=index,
-            unique_filename=False
+            unique_filename=False,
         )
 
 upload_dataset()

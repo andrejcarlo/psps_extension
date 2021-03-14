@@ -24,17 +24,22 @@
 
 // add_image()
 var img;
+var src_img;
 function setup() {
     noCanvas();
-    let r = floor(random(820)) + 1;
+    let r = floor(random(1,820)) + 1;
 
-    let src_img = "https://res.cloudinary.com/pspscloudi/image/upload/" + "q_auto:low" + "/apollo_albert/"  + r + ".jpg";
+    src_img = "https://res.cloudinary.com/pspscloudi/image/upload/" + "" + "/apollo_albert/"  + r + ".jpg";
     img = createImg(src_img);
     
     img.size(windowWidth, windowHeight);
     img.position(0, 0);
+    
   }
 
 function draw() {
+    //tint(255, 127);
     img.size(windowWidth, windowHeight)
+    //tint(255, 127);
+    background(255)
 }

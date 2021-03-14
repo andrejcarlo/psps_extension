@@ -1,0 +1,25 @@
+{
+    "manifest_version": 2,
+    "name": "Cow's Extension",
+    "version": "0.03",
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": ["content.js"]
+        }
+    ],
+
+    "chrome_url_overrides": {
+        "newtab" : "index.html"
+    },
+    "browser_action": {
+        "default_icon": "icons/cow16.png"
+    },
+    "icons": { 
+        "16": "icons/cow16.png",
+        "48": "icons/cow48.png",
+       "128": "icons/cow144.png" }
+
+}
